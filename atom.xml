@@ -4,7 +4,7 @@
   <title><![CDATA[Hi, I'm Akaash.]]></title>
   <link href="http://akaashanky.github.io/atom.xml" rel="self"/>
   <link href="http://akaashanky.github.io/"/>
-  <updated>2014-05-04T02:42:12+05:30</updated>
+  <updated>2014-05-04T03:49:22+05:30</updated>
   <id>http://akaashanky.github.io/</id>
   <author>
     <name><![CDATA[Akaash Patnaik]]></name>
@@ -54,6 +54,56 @@
 <p>That&rsquo;s the first verse from Modest Mouse&rsquo;s Bankrupt on Selling. While the song&rsquo;s about the pitfalls of capitalism, the lyrics above although very explicit in what they&rsquo;re talking about are equally applicable to the theme of the song as they could be to greed and/or betrayal. The fluidity with which the song plays to your current mood in the moment is what I appreciate more than the brilliance that you might uncover during a post-mortem dissection of the lyrics.</p>
 
 <p>I hadn&rsquo;t hitherto realised this about my preferences towards lyrical content, but once I had, it came as no surprise that my admiration has always been particularly strong for artists such as Bruce Springsteen, Morrissey, Ben Gibbard, etc. who find beautifully vivid ways of presenting the simplest of concepts, thereby lending it <em>just enough</em> ambiguity to make it feel different to every ear on every play.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Running a Python script from Node.js]]></title>
+    <link href="http://akaashanky.github.io/blog/2014/04/10/running-a-python-script-from-node-dot-js/"/>
+    
+    <updated>2014-04-10T03:10:39+05:30</updated>
+    <id>http://akaashanky.github.io/blog/2014/04/10/running-a-python-script-from-node-dot-js</id>
+    
+    <content type="html"><![CDATA[<p>While working on something today, I needed to decrypt an RC4 encrypted string on Node. I was receiving the encrypted string from another server, so the encryption wasn&rsquo;t really under my control. Given that there are a bunch of pre-written NPM modules out there that do RC4 encryption/decryption this wasn&rsquo;t supposed to be a particularly difficult task. However, this seemingly trivial job turned out to be quite the timesuck.</p>
+
+<p>None of the crypto modules I tried were able to correctly decrypt the encrypted string, which I&rsquo;m guessing meant that the other server was probably doing something funny during the encryption process. The organisation whose server I was communicating with had provided a Python code snippet that had an implementation of the RC4 decryption algorithm, and this particular implementation was working for the encrypted strings being returned.</p>
+
+<p>As a quick-fix, I decided to just call this Python script from my Node server, pass it the encrypted string and receive the decrypted string as output. To do this in Node, you need to spawn a child Python process.</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">terminal</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;child_process&#39;</span><span class="p">).</span><span class="nx">spawn</span><span class="p">(</span><span class="s1">&#39;python&#39;</span><span class="p">,</span> <span class="p">[</span><span class="s1">&#39;rc4.py&#39;</span><span class="p">,</span> <span class="nx">secretKey</span><span class="p">,</span> <span class="nx">encryptedString</span><span class="p">]);;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">terminal</span><span class="p">.</span><span class="nx">stdout</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;stdout: &#39;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">terminal</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;exit&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">code</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;child process exited with code &#39;</span> <span class="o">+</span> <span class="nx">code</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">terminal</span><span class="p">.</span><span class="nx">stderr</span><span class="p">.</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;data&#39;</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
+</span><span class='line'>  <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;stderr: &#39;</span> <span class="o">+</span> <span class="nx">data</span><span class="p">);</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>The arguments to the spawn function are the child process command name (in this case &lsquo;python&rsquo; since I was trying to run a python program), followed by the array of arguments needed by the child process (in this case the name of the Python script, the encryption key and the encrypted string, respectively).</p>
+
+<p>This worked quite well, but seemed somewhat hack-y in nature. So I might have to revisit this later and see how to do it directly within the Node process itself.</p>
 ]]></content>
     
   </entry>
