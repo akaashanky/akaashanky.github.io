@@ -1,0 +1,4 @@
+User-agent: *
+Disallow: 
+
+Sitemap: http://akaashanky.github.io/sitemap.xml 
