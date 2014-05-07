@@ -4,7 +4,7 @@
   <title><![CDATA[Hi, I'm Akaash.]]></title>
   <link href="http://akaashanky.github.io/atom.xml" rel="self"/>
   <link href="http://akaashanky.github.io/"/>
-  <updated>2014-05-04T15:10:01+05:30</updated>
+  <updated>2014-05-07T21:43:45+05:30</updated>
   <id>http://akaashanky.github.io/</id>
   <author>
     <name><![CDATA[Akaash Patnaik]]></name>
@@ -54,6 +54,27 @@
 <p>That&rsquo;s the first verse from Modest Mouse&rsquo;s Bankrupt on Selling. While the song&rsquo;s about the pitfalls of capitalism, the lyrics above although very explicit in what they&rsquo;re talking about are equally applicable to the theme of the song as they could be to greed and/or betrayal. The fluidity with which the song plays to your current mood in the moment is what I appreciate more than the brilliance that you might uncover during a post-mortem dissection of the lyrics.</p>
 
 <p>I hadn&rsquo;t hitherto realised this about my preferences towards lyrical content, but once I had, it came as no surprise that my admiration has always been particularly strong for artists such as Bruce Springsteen, Morrissey, Ben Gibbard, etc. who find beautifully vivid ways of presenting the simplest of concepts, thereby lending it <em>just enough</em> ambiguity to make it feel different to every ear on every play.</p>
+]]></content>
+    
+  </entry>
+  
+  <entry>
+    
+    <title type="html"><![CDATA[Extraction-based text-summarization: A naive approach]]></title>
+    <link href="http://akaashanky.github.io/blog/2014/04/24/extraction-based-text-summarization-a-naive-approach/"/>
+    
+    <updated>2014-04-24T14:36:55+05:30</updated>
+    <id>http://akaashanky.github.io/blog/2014/04/24/extraction-based-text-summarization-a-naive-approach</id>
+    
+    <content type="html"><![CDATA[<p>I had always found Natural Language Processing (NLP) quite interesting, and a few times had toyed with the idea of exploring it a little more seriously. The buzz around recent YC alum, <a href="http://wit.ai">Wit.AI</a>, finally spurred me into action and I decided to give it a shot.</p>
+
+<p>As with anything, the toughest part was getting started. NLP, despite being a discipline in its nascency, is actually quite expansive in its scope. I decided to go for low hanging fruit and start with text-summarization.</p>
+
+<p>I came across <a href="http://thetokenizer.com/2013/04/28/build-your-own-summary-tool/">this</a> algorithm. It seems to take a naive extraction-based approach to text-summarisation but came across as something that should work pretty well. Upon using an implementation of it on random articles on the internet, I was somewhat disappointed with the results. That&rsquo;s when I came across <a href="https://github.com/philplckthun/node-sumuparticles">this</a> implementation of essentially the same algorithm, with a slight tweak that improves results significantly.</p>
+
+<p>To explain it briefly, the algorithm converts the text into a fully-connected, weighted graph, wherein every sentence is a node in the graph and its edges connect it to every other sentence/node in the graph. The weight associated with every edge is an &ldquo;intersection score&rdquo; which quantifies how much the two sentences connected by the edge have in common. Finally, the sum of all the edges/interesection-scores of a sentence/node are summed up. The sentences with high scores are assumed to be &ldquo;key sentences&rdquo; because they have more in common with the other sentences and are thus included in the summary.</p>
+
+<p>I&rsquo;ve created a small app that uses the modified implementation <a href="http://tldr-app.herokuapp.com/">here</a>. And the code for it can be found <a href="https://github.com/akaashanky/tldr">here</a>.</p>
 ]]></content>
     
   </entry>
