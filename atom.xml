@@ -4,7 +4,7 @@
   <title><![CDATA[Hi, I'm Akaash.]]></title>
   <link href="http://akaashanky.github.io/atom.xml" rel="self"/>
   <link href="http://akaashanky.github.io/"/>
-  <updated>2014-05-07T21:43:45+05:30</updated>
+  <updated>2014-05-07T21:47:21+05:30</updated>
   <id>http://akaashanky.github.io/</id>
   <author>
     <name><![CDATA[Akaash Patnaik]]></name>
@@ -60,7 +60,7 @@
   
   <entry>
     
-    <title type="html"><![CDATA[Extraction-based text-summarization: A naive approach]]></title>
+    <title type="html"><![CDATA[Extraction-Based Text-Summarization: A Naive Approach]]></title>
     <link href="http://akaashanky.github.io/blog/2014/04/24/extraction-based-text-summarization-a-naive-approach/"/>
     
     <updated>2014-04-24T14:36:55+05:30</updated>
