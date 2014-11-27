@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: functional | Hi, I'm Akaash.]]></title>
+  <link href="http://akaashanky.github.io/blog/categories/functional/atom.xml" rel="self"/>
+  <link href="http://akaashanky.github.io/"/>
+  <updated>2014-11-27T20:12:00+05:30</updated>
+  <id>http://akaashanky.github.io/</id>
+  <author>
+    <name><![CDATA[Akaash Patnaik]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Buddhism &amp; Programming]]></title>
+    <link href="http://akaashanky.github.io/blog/2014/11/27/buddhism-and-programming/"/>
+    <updated>2014-11-27T19:08:31+05:30</updated>
+    <id>http://akaashanky.github.io/blog/2014/11/27/buddhism-and-programming</id>
+    <content type="html"><![CDATA[<p>What happens when one&rsquo;s vocational interest in Programming meets his recreational fascination with Buddhism?</p>
+
+<p>A thought-provoking (albeit, unproductive) evening spent trying to understand how programs should view time.</p>
+
+<p>Every time I’ve humoured my interest in Buddhist philosophy, I’ve always been struck by how its principles run orthogonal (if not downright antithetical) to those of Programming. Where Buddhism relies on the concepts of <em>anicca</em> (impermanence of being), <em>dukkha</em> (imperfection) &amp; <em>anatta</em> (not self) to characterise sentience, programs depend on hard-edged entities, precision &amp; unambiguously defined rules &amp; identities. <em>Sunyata</em> (a state of emptiness) is about the last thing a programmer experiences when he’s going about writing his code. And while the Noble Truths of Buddhism propound an outlook that should be bereft of expectations, Programming is all about defining deterministic systems that conform to the expectations of those that build and use them.</p>
+
+<p>So, ostensibly, it would appear that there isn’t much for Programming to learn from Buddhism.</p>
+
+<p>Recently, though, I was watching Rich Hickey’s talk, <a href="http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey">Are we there yet?</a>, on the current state of programming, and how the widely observed design practices of Object Oriented Programming (OOP) have come to conflate the actually distinct concepts of entities (putative things) &amp; states (values assumed by entities). This is a consequence of how our brains have been trained to perceive reality.</p>
+
+<p>A great analogy Hickey uses here is that of a river. He leads with this fascinating quote:</p>
+
+<blockquote><p>No man ever steps in the same river twice.</p>
+
+<p>~Heraclitus</p></blockquote>
+
+<p>As humans, we use abstractions to make sense of the world around us. The ‘river’ is but an abstraction for a large stream of water (which in itself is also an abstraction; but let’s not overcomplicate this for now) flowing from one point to another. But when broken down, it’s nothing but some water at a point in space and then later other water at that same point. ‘River’ is just the identity we’ve superimposed on the water and the continuum of its states at different points in time. In doing so, we’ve succumbed to one of the pitfalls of OOP, wherein we fail to distinguish between entities and their many states over time.</p>
+
+<p>This is where Immutability (especially as implemented in languages like Clojure) shines by preserving all the states of entities over time and treating them as what they are — unchangeable snapshots of the entity’s existence at specific points in time. So, when viewed, the entity is representative of its state only at that point in time. This makes the entity immutable. The entity never changes, it just associates itself with different, causally-related states.</p>
+
+<p>Poetically beautiful, is how I’d describe the resonance this has with the Buddhist view of time — which is that there is no time. Only an illusion of it; that stems from the series of &ldquo;epochal transitions&rdquo; we observe entities going through. Nowhere is this view more eloquently articulated than in these lines from one of my favourite books, <a href="https://www.goodreads.com/book/show/52036.Siddhartha?ac=1">Siddhartha</a>. In them, the protagonist, Siddhartha, arrives at an epiphany after spending time by a — wait for it — <em>river!</em></p>
+
+<blockquote><p>&ldquo;Did you,&rdquo; so he asked him at one time, &ldquo;did you too learn that secret from the river: that there is no time?</p>
+
+<p>[&hellip;]</p>
+
+<p>&ldquo;Yes, Siddhartha,&rdquo; he spoke. &ldquo;It is this what you mean, isn&rsquo;t it: that the river is everywhere at once, at the source and at the mouth, at the waterfall, at the ferry, at the rapids, in the sea, in the mountains, everywhere at once, and that there is only the present time for it, not the shadow of the past, not the shadow of the future?&rdquo;</p></blockquote>
+
+<p>If programs were to also give up this illusion of time and embrace the concept more as a progression of instants, a succession of indelible ’now’-s, we’d actually be moving to a model much better equipped to handle the challenges of concurrency &amp; parallelism, that arise with modern computing architecture.</p>
+
+<p>With all the training in OO-thinking that I’ve assimilated over the years, it’s going to take a fair bit of unlearning to really ease into newer paradigms that emphasise the importance of immutability in viewing not just my code, but also the world.</p>
+]]></content>
+  </entry>
+  
+</feed>

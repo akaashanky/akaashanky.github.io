@@ -1,0 +1,288 @@
+
+<!DOCTYPE html>
+<!--[if IEMobile 7 ]><html class="no-js iem7"><![endif]-->
+<!--[if lt IE 9]><html class="no-js lte-ie8"><![endif]-->
+<!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <title>Buddhism &amp; Programming - Hi, I'm Akaash.</title>
+  <meta name="author" content="Akaash Patnaik">
+
+  
+  <meta name="description" content="What happens when one&rsquo;s vocational interest in Programming meets his recreational fascination with Buddhism? A thought-provoking (albeit, &hellip;">
+  
+
+  <!-- http://t.co/dKP3o1e -->
+  <meta name="HandheldFriendly" content="True">
+  <meta name="MobileOptimized" content="320">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  
+  <link rel="canonical" href="http://akaashanky.github.io/blog/2014/11/27/buddhism-and-programming">
+  <link href="/favicon.png" rel="icon">
+  <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
+  <link href="/atom.xml" rel="alternate" title="Hi, I'm Akaash." type="application/atom+xml">
+  <script src="/javascripts/modernizr-2.0.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script>!window.jQuery && document.write(unescape('%3Cscript src="./javascripts/lib/jquery.min.js"%3E%3C/script%3E'))</script>
+  <script src="/javascripts/octopress.js" type="text/javascript"></script>
+  <!--Fonts from Google"s Web font directory at http://google.com/webfonts -->
+<link href="http://fonts.googleapis.com/css?family=PT+Serif:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href="http://fonts.googleapis.com/css?family=PT+Sans:regular,italic,bold,bolditalic" rel="stylesheet" type="text/css">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+<link href='http://fonts.googleapis.com/css?family=Fjalla+One' rel='stylesheet' type='text/css'>
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
+  
+
+</head>
+
+<body   class="collapse-sidebar sidebar-footer" >
+  <header role="banner">
+	<div class="header-title"><a href="/">Hi, I'm Akaash.</a></div>
+
+
+	<br><div class="header-subtitle">My apologies in advance.</div>
+
+</header>
+  <nav role="navigation"><ul class="subscription" data-subscription="rss">
+  <li><a href="/atom.xml" title="subscribe via RSS"><i class="fa fa-rss" style="font-size: 30px"></i></a></li>
+  
+  
+    <li><a href="http://github.com/akaashanky" title="GitHub"><i class="fa fa-github" style="font-size: 30px"></i></a></li>
+  
+  
+    <li><a href="http://twitter.com/worldpiece" title="Twitter"><i class="fa fa-twitter" style="font-size: 30px"></i></a></li>
+  
+</ul>
+  
+<form action="https://www.google.com/search" method="get">
+  <fieldset role="search">
+    <input type="hidden" name="q" value="site:akaashanky.github.io" />
+    <input class="search" type="text" name="q" results="0" placeholder="Search"/>
+  </fieldset>
+</form>
+  
+<ul class="main-navigation">
+  <li><a href="/blog">Blog</a></li>
+  <li><a href="/blog/archives">Archives</a></li>
+  <li><a href="/about">About</a></li>
+</ul>
+
+</nav>
+  <div id="main">
+    <div id="content">
+      <div>
+<article class="hentry" role="article">
+  
+  <header>
+  
+    
+      <h1 class="entry-title">Buddhism &amp; Programming</h1>
+    
+  
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-27T19:08:31+05:30" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time>
+        
+      </p>
+    
+  </header>
+
+
+<div class="entry-content"><p>What happens when one&rsquo;s vocational interest in Programming meets his recreational fascination with Buddhism?</p>
+
+<p>A thought-provoking (albeit, unproductive) evening spent trying to understand how programs should view time.</p>
+
+<p>Every time I’ve humoured my interest in Buddhist philosophy, I’ve always been struck by how its principles run orthogonal (if not downright antithetical) to those of Programming. Where Buddhism relies on the concepts of <em>anicca</em> (impermanence of being), <em>dukkha</em> (imperfection) &amp; <em>anatta</em> (not self) to characterise sentience, programs depend on hard-edged entities, precision &amp; unambiguously defined rules &amp; identities. <em>Sunyata</em> (a state of emptiness) is about the last thing a programmer experiences when he’s going about writing his code. And while the Noble Truths of Buddhism propound an outlook that should be bereft of expectations, Programming is all about defining deterministic systems that conform to the expectations of those that build and use them.</p>
+
+<p>So, ostensibly, it would appear that there isn’t much for Programming to learn from Buddhism.</p>
+
+<p>Recently, though, I was watching Rich Hickey’s talk, <a href="http://www.infoq.com/presentations/Are-We-There-Yet-Rich-Hickey">Are we there yet?</a>, on the current state of programming, and how the widely observed design practices of Object Oriented Programming (OOP) have come to conflate the actually distinct concepts of entities (putative things) &amp; states (values assumed by entities). This is a consequence of how our brains have been trained to perceive reality.</p>
+
+<p>A great analogy Hickey uses here is that of a river. He leads with this fascinating quote:</p>
+
+<blockquote><p>No man ever steps in the same river twice.</p>
+
+<p>~Heraclitus</p></blockquote>
+
+<p>As humans, we use abstractions to make sense of the world around us. The ‘river’ is but an abstraction for a large stream of water (which in itself is also an abstraction; but let’s not overcomplicate this for now) flowing from one point to another. But when broken down, it’s nothing but some water at a point in space and then later other water at that same point. ‘River’ is just the identity we’ve superimposed on the water and the continuum of its states at different points in time. In doing so, we’ve succumbed to one of the pitfalls of OOP, wherein we fail to distinguish between entities and their many states over time.</p>
+
+<p>This is where Immutability (especially as implemented in languages like Clojure) shines by preserving all the states of entities over time and treating them as what they are — unchangeable snapshots of the entity’s existence at specific points in time. So, when viewed, the entity is representative of its state only at that point in time. This makes the entity immutable. The entity never changes, it just associates itself with different, causally-related states.</p>
+
+<p>Poetically beautiful, is how I’d describe the resonance this has with the Buddhist view of time — which is that there is no time. Only an illusion of it; that stems from the series of &ldquo;epochal transitions&rdquo; we observe entities going through. Nowhere is this view more eloquently articulated than in these lines from one of my favourite books, <a href="https://www.goodreads.com/book/show/52036.Siddhartha?ac=1">Siddhartha</a>. In them, the protagonist, Siddhartha, arrives at an epiphany after spending time by a — wait for it — <em>river!</em></p>
+
+<blockquote><p>&ldquo;Did you,&rdquo; so he asked him at one time, &ldquo;did you too learn that secret from the river: that there is no time?</p>
+
+<p>[&hellip;]</p>
+
+<p>&ldquo;Yes, Siddhartha,&rdquo; he spoke. &ldquo;It is this what you mean, isn&rsquo;t it: that the river is everywhere at once, at the source and at the mouth, at the waterfall, at the ferry, at the rapids, in the sea, in the mountains, everywhere at once, and that there is only the present time for it, not the shadow of the past, not the shadow of the future?&rdquo;</p></blockquote>
+
+<p>If programs were to also give up this illusion of time and embrace the concept more as a progression of instants, a succession of indelible ’now’-s, we’d actually be moving to a model much better equipped to handle the challenges of concurrency &amp; parallelism, that arise with modern computing architecture.</p>
+
+<p>With all the training in OO-thinking that I’ve assimilated over the years, it’s going to take a fair bit of unlearning to really ease into newer paradigms that emphasise the importance of immutability in viewing not just my code, but also the world.</p>
+</div>
+
+
+  <footer>
+    <p class="meta">
+      
+  
+
+<span class="byline author vcard">Posted by <span class="fn">Akaash Patnaik</span></span>
+
+      
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2014-11-27T19:08:31+05:30" pubdate data-updated="true">Nov 27<span>th</span>, 2014</time>
+      
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/buddhism/'>Buddhism</a>, <a class='category' href='/blog/categories/functional/'>functional</a>, <a class='category' href='/blog/categories/philosophy/'>philosophy</a>, <a class='category' href='/blog/categories/programming/'>programming</a>
+  
+</span>
+
+
+    </p>
+    
+      <div class="sharing">
+  
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://akaashanky.github.io/blog/2014/11/27/buddhism-and-programming/" data-via="worldpiece" data-counturl="http://akaashanky.github.io/blog/2014/11/27/buddhism-and-programming/" >Tweet</a>
+  
+  
+  
+</div>
+
+    
+    <p class="meta">
+      
+        <a class="basic-alignment left" href="/blog/2014/05/03/words-whatre-they-good-for/" title="Previous Post: Words! What're they good for?">&laquo; Words! What're they good for?</a>
+      
+      
+    </p>
+  </footer>
+</article>
+
+</div>
+
+<aside class="sidebar">
+  
+    <section>
+  <h1>Recent Posts</h1>
+  <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2014/11/27/buddhism-and-programming/">Buddhism &amp; Programming</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/05/03/words-whatre-they-good-for/">Words! What're they good for?</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/24/extraction-based-text-summarization-a-naive-approach/">Extraction-Based Text-Summarization: A Naive Approach</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/04/10/running-a-python-script-from-node-dot-js/">Running a Python script from Node.js</a>
+      </li>
+    
+      <li class="post">
+        <a href="/blog/2014/03/20/self-centeredness/">Self-centeredness</a>
+      </li>
+    
+  </ul>
+</section>
+
+<section>
+  <h1>GitHub Repos</h1>
+  <ul id="gh_repos">
+    <li class="loading">Status updating...</li>
+  </ul>
+  
+  <a href="https://github.com/akaashanky">@akaashanky</a> on GitHub
+  
+  <script type="text/javascript">
+    $(document).ready(function(){
+        if (!window.jXHR){
+            var jxhr = document.createElement('script');
+            jxhr.type = 'text/javascript';
+            jxhr.src = '/javascripts/libs/jXHR.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(jxhr, s);
+        }
+
+        github.showRepos({
+            user: 'akaashanky',
+            count: 0,
+            skip_forks: true,
+            target: '#gh_repos'
+        });
+    });
+  </script>
+  <script src="/javascripts/github.js" type="text/javascript"> </script>
+</section>
+
+
+
+
+
+  
+</aside>
+
+
+    </div>
+  </div>
+  <footer role="contentinfo"><p>
+  Copyright &copy; 2014 -  Akaash Patnaik <br/>
+  <span class="credit">Powered by <a href="http://octopress.org">Octopress</a> + <a href="https://github.com/ioveracker/mnml">mnml</a>.
+	  
+  </span>
+</p>
+
+</footer>
+  
+
+
+
+
+
+
+
+  <script type="text/javascript">
+    (function(){
+      var twitterWidgets = document.createElement('script');
+      twitterWidgets.type = 'text/javascript';
+      twitterWidgets.async = true;
+      twitterWidgets.src = 'http://platform.twitter.com/widgets.js';
+      document.getElementsByTagName('head')[0].appendChild(twitterWidgets);
+    })();
+  </script>
+
+
+
+
+
+</body>
+</html>
